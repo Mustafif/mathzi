@@ -1,7 +1,14 @@
 const std = @import("std");
 const testing = std.testing;
 
-pub fn Vec3(comptime T: type) type {
+pub const Vec3_16 = Vec3(f16);
+pub const Vec3_32 = Vec3(f32);
+pub const Vec3_64 = Vec3(f64);
+pub const Vec3_80 = Vec3(f80);
+pub const Vec3_128 = Vec3(f128);
+
+
+fn Vec3(comptime T: type) type {
     return struct {
         x: T,
         y: T,
